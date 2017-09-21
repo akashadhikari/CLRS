@@ -1,15 +1,17 @@
-def insertionSort(alist):
-   for index in range(1,len(my_array)):
+def insertionSort(A):
+   for j in range(1,len(A)):
 
-     currentvalue = my_array[index]
-     position = index
+     key = A[j]
+     i = j
 
-     while position>0 and my_array[position-1]>currentvalue:
-         my_array[position]=my_array[position-1]
-         position = position-1
+     while i>0 and A[i-1]>key:
+         A[i]=A[i-1]
+         i = i-1
 
-     my_array[position]=currentvalue
+     A[i]=key
 
-my_array = [5,2,4,6,1,3]
-insertionSort(my_array)
-print(my_array)
+A = [5,2,4,6,1,3]
+insertionSort(A)
+print(A)
+
+
